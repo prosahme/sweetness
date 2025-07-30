@@ -1,0 +1,12 @@
+# Ignore node_modules folders
+node_modules/
+
+# Ignore Vite build output
+dist/
+
+# Ignore environment variable files (they contain secrets)
+.env
+
+# Ignore logs and system files
+*.log
+.DS_Store
