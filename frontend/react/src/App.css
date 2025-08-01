@@ -65,7 +65,6 @@ h2 {
   flex-direction: column;
   min-height: 100vh;
 }
-
 .hero {
   flex: 1;
   background: url("../hero-cake.jpg") center/cover no-repeat;
@@ -266,5 +265,140 @@ footer {
   .review-cards {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+.menu-page {
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.menu-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #8b0000;
+}
+
+.menu-tabs {
+  margin-bottom: 2rem;
+}
+
+.tab {
+  background: #fff;
+  border: 2px solid #ffc0cb;
+  padding: 0.5rem 1.2rem;
+  margin: 0 0.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background: #ffe4e1;
+}
+
+.tab.active {
+  background: #ffc0cb;
+  color: #fff;
+  font-weight: bold;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+}
+
+.menu-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(255, 192, 203, 0.3);
+  transition: transform 0.3s ease;
+  animation: slideUp 0.6s ease;
+}
+
+.menu-card:hover {
+  transform: scale(1.03);
+}
+
+.menu-card img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.menu-card h3 {
+  margin: 0.8rem 0 0.4rem;
+  color: #d2691e;
+}
+
+.price {
+  font-weight: bold;
+  color: #4a2c2a;
+}
+
+.ingredients {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.menu-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.add-btn,
+.custom-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-btn {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.custom-btn {
+  background-color: #f5deb3;
+}
+
+.add-btn:hover {
+  background-color: #ff1493;
+}
+
+.custom-btn:hover {
+  background-color: #f0c27b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
