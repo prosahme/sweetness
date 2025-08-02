@@ -98,6 +98,20 @@ app.post("/custom-order", upload.single("image"), (req, res) => {
   });
 });
 
+app.post("/contact", (req, res) => {
+  const { name, email, message } = req.body;
+
+  const sql = "INSERT INTO messages (name, email, message) VALUES (?, ?, ?)";
+  db.query(sql, [name, email, message], (err, result) => {
+    if (err) {
+      console.error("Error sending message:", err);
+      res.status(500).json({ message: "Error sending message" });
+    } else {
+      res.json({ message: "Message sent successfully" });
+    }
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
