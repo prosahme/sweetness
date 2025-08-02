@@ -1,4 +1,3 @@
-// src/pages/Menu.jsx
 import { useState } from "react";
 import "./../App.css";
 

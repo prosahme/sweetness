@@ -10,3 +10,5 @@ dist/
 # Ignore logs and system files
 *.log
 .DS_Store
+
+uploads/
