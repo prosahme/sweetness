@@ -4,6 +4,9 @@ import Landing from "./pages/Landing";
 import Menu from "./pages/Menu";
 import CustomOrder from "./pages/CustomOrder";
 import AboutUs from "./pages/AboutUs";
+import Contact from "./pages/Contact";
+import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
         <Link to="/menu">Menu</Link>
         <Link to="/custom-order">Custom Cake</Link>
         <Link to="/about">About Us</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/cart">Cart</Link>
+        <Link to="/checkout">Checkout</Link>
       </nav>
 
       <Routes>
@@ -31,6 +37,9 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/custom-order" element={<CustomOrder />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </>
   );
