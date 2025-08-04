@@ -4,6 +4,7 @@ const cors = require("cors");
 const multer = require("multer");
 const path = require("path");
 const orderRoutes = require("./routes/orders");
+const authRoutes = require("./routes/auth");
 
 const app = express();
 const PORT = 3001;
@@ -29,6 +30,7 @@ const uploadSingleImage = upload.single("image");
 const productRouter = require("./routes/products");
 app.use("/products", productRouter);
 app.use("/orders", orderRoutes);
+app.use("/auth", authRoutes);
 
 const db = mysql.createConnection({
   host: "localhost",
